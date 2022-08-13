@@ -3,9 +3,9 @@ var app = express();
 var http = require('http');
 var parser = require('ua-parser-js');
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 
-app.get('/', function (req, res) {
+app.get('/parser', function (req, res) {
 	var agent = parser(req.headers['user-agent']);
 	var browser = agent.browser.name;
     var os = agent.os.name + ' ' + agent.os.version;
@@ -18,4 +18,4 @@ app.get('/', function (req, res) {
 });
 
 app.listen(PORT);
-console.log('listening on port 3000...');    
+console.log(`listening on port ${PORT}...`);    
