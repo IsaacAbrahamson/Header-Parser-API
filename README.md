@@ -6,4 +6,4 @@ This was one of the first API's that I built. It uses Node and Express.js to cre
 
 ## Usage
 
-`GET /`: Parses request's header and sends JSON response.
+`GET /parser`: Parses request's header and sends JSON response.
